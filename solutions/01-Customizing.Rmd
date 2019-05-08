@@ -1,0 +1,59 @@
+---
+title: "Customizing Plots (solutions)"
+output: html_document
+---
+
+```{r setup}
+library(tidyverse)
+library(geoscidata)
+```
+
+```{r}
+warwick
+```
+
+## Exercise 1
+
+Modify the following code to use one of ggplot2's built-in themes. Experiment! See `?theme_bw` for a list of themes that can be used.
+
+```{r}
+ggplot(warwick) + 
+  geom_point(aes(x = Fe_ppm, y = Mn_ppm, color = rock_type)) +
+  # could also be theme_gray(), theme_dark(), theme_light(), theme_minimal(), theme_linedraw(), theme_classic()
+  theme_bw()
+```
+
+## Exercise 2
+
+Modify the following code to use `scale_color_brewer()`. Experiment with the `palette` argument (see the "Palettes" section of the help file `?scale_color_brewer`) to change the colors (Hint: try `"Spectral"`).
+
+```{r}
+ggplot(warwick) + 
+  geom_point(aes(x = Fe_ppm, y = Mn_ppm, color = rock_type)) +
+  # pallete can be a several different values
+  scale_color_brewer(palette = "Spectral")
+```
+
+## Exercise 3
+
+Create a scatterplot of `warwick` using the `K_ppm` and `Rb_ppm` variables, colored by `rock_type`. Apply your favourite built-in theme, and your favorite color scale using `scale_color_brewer()`.
+
+```{r}
+ggplot(warwick) +
+  geom_point(aes(x = K_ppm, y = Rb_ppm, color = rock_type)) +
+  theme_bw() +
+  scale_color_brewer(palette = "Spectral")
+```
+
+***
+
+# Take aways
+
+- Plots can be customized by adding elements using the `+` operator.
+- Themes control the non-data appearance of visual elements. The default theme can be replaced by adding a `theme_*()` object to a plot.
+- Color scales change the colors that are used to represent data. The default color scale can be replaced by adding `scale_color_brewer()` to a plot.
+
+# More Practice
+
+- The [Exploratory Data Analysis](https://r4ds.had.co.nz/exploratory-data-analysis.html) and [Graphics for Communication](https://r4ds.had.co.nz/graphics-for-communication.html) chapters in [R for Data Science](https://r4ds.had.co.nz/).
+- The [Exploratory Data Analysis Primer](https://rstudio.cloud/learn/primers/3.1) and the [Plot Customization Primer](https://rstudio.cloud/learn/primers/3.8) from [RStudio Cloud](https://rstudio.cloud/)
