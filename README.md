@@ -1,7 +1,7 @@
 
 # Welcome to r4greg
 
-Welcome to the workshop! This lesson will build on the basic **ggplot2** vocabulary you learned in [part 1 of the workshop](http://github.com/paleolimbot/r4ags) to help make your plots look the way you want them to. [Click here](https://rstudio.cloud/project/207204) to launch an RStudio IDE pre-loaded with today's exercise.
+Welcome to the workshop! This lesson will build on the basic **ggplot2** vocabulary you learned in [part 1 of the workshop](http://github.com/paleolimbot/r4ags) to help make your plots look the way you want them to. [Click here](https://rstudio.cloud/project/342897) to launch an RStudio IDE pre-loaded with today's exercise.
 
 Resources for future learning:
 
