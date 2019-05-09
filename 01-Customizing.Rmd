@@ -1,5 +1,5 @@
 ---
-title: "Customizing Plots (solutions)"
+title: "Customizing Plots"
 output: html_notebook
 ---
 
